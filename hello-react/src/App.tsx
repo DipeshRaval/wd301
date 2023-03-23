@@ -1,5 +1,34 @@
+import React from "react";
 import TextCard from "./TextCard";
+
+interface pandingItem {
+  type:string,
+  title:string,
+  dueDate:string,
+  assigneeName:string,
+}
+
+interface doneItem {
+  type:string,
+  title:string,
+  completedAtDate:string,
+  assigneeName:string,
+}
+
 function App() {
+
+  const getItem = (type:string,title :string,date :string,assigneeName:string) =>
+  {
+    if(type==="panding")
+    {
+      let objPand : pandingItem = {type,title,dueDate:date,assigneeName}
+      return objPand;
+    }else{
+      let objDone : doneItem = {type,title,completedAtDate:date,assigneeName}
+      return objDone;
+    }
+  }
+
   return (
     <div className="container mx-auto px-4">
       <h1 className="mt-2 text-3xl font-bold">Samrter Tasks</h1>
@@ -12,20 +41,14 @@ function App() {
           <h2 className="mb-2 text-center text-2xl font-semibold">Panding</h2>
           <div>
             <TextCard
-              type="panding"
-              title="Build a website with satic content"
-              dueDate="10th April"
-              assigneeName="Rohit S"
+              {...getItem("panding","Build a website with satic content","10th April","Rohit S")}
             />
             <TextCard
-              type="panding"
-              title="Add a blog"
-              dueDate="22nd March"
-              assigneeName="Rohit M"
+              {...getItem("panding","Add a blog","22nd March","Rohit M")}
             />
             <div className="border border-gray-200 p-1">
               <p className="text-xl p-1 bg-gray-200">
-                <i class="fa-regular fa-plus px-1"></i> New Task
+                <i className="fa-regular fa-plus px-1"></i> New Task
               </p>
             </div>
           </div>
@@ -34,14 +57,10 @@ function App() {
           <h1 className="mb-2 text-center text-2xl font-semibold">Done</h1>
           <div>
             <TextCard
-              completedAtDate="10th April"
-              assigneeName="Rohit M"
-              title="Design the mockup"
+              {...getItem("done","Design the mockup","10th April","Rohit M")}
             />
             <TextCard
-              completedAtDate="20th April"
-              assigneeName="Ajay S"
-              title="Get a approval from principal"
+              {...getItem("done","Get a approval from principal","20th April","Ajay S")}
             />
           </div>
         </div>
