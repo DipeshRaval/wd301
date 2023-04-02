@@ -1,14 +1,12 @@
 import React from 'react';
-import TaskForm from './TaskForm';
+import TaskApp from './TaskApp';
 
-import TaskList from './TaskList';
 
 
 function App() {
   return (
     <div className="App">
-      <TaskForm />
-      <TaskList />
+      <TaskApp />
     </div>
   );
 }
