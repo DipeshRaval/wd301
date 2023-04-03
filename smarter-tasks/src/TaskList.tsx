@@ -12,7 +12,7 @@ export default class TaskList extends Component<Props, State> {
 
   render() {
     return (
-      this.props.tasks.map((task,index) => <Task key={index} title={task.title} />)
+      this.props.tasks.map((task,index) => <Task key={index} title={task.title} description={task.description} dueDate={task.dueDate} />)
     )
   }
 }
