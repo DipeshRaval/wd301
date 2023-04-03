@@ -4,7 +4,6 @@ import TaskList from './TaskList'
 import { TaskItem } from './types'
 
 interface TaskAppProps {
-
 }
 
 interface TaskAppState {
