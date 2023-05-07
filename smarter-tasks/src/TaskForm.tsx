@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { TaskItem } from './types'
+import uuid from 'react-uuid';
 
 interface TaskFormProps{
   addTask : (task :TaskItem) => void
 }
 
 interface TaskFormState{
+  id:string,
   title : string,
   description: string,
   dueDate: string
@@ -14,6 +16,7 @@ interface TaskFormState{
 export default function TaskFormFC(props : TaskFormProps) {
 
   const [formState,setFormState] = useState<TaskFormState>({
+    id:"",
     title: '',
     description : '',
     dueDate: '',
@@ -47,8 +50,10 @@ export default function TaskFormFC(props : TaskFormProps) {
       alert("Task duedate cannot be empty")
       return;
     }
+    // formState.id = new Date().valueOf().toString()
+    formState.id = uuid();
     props.addTask(formState);
-    setFormState({ title: "",description:"",dueDate:"" });
+    setFormState({ id:"",title: "",description:"",dueDate:"" });
   }
   return (
     <form onSubmit={addTask}>

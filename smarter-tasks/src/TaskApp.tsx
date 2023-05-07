@@ -18,10 +18,10 @@ export default function TaskAppFC() {
     })
   }
 
-  const deleteTask = (title: string) =>
+  const deleteTask = (id: string) =>
   {
       setTaskAppState({
-        tasks : taskAppState.tasks.filter(task => task.title !== title)
+        tasks : taskAppState.tasks.filter(task => task.id !== id)
       })
   }
 
@@ -34,9 +34,9 @@ export default function TaskAppFC() {
       <span className="font-bold">Project: </span>
       Graduation Final Year Project (Revamp college website)
     </h1>
-    <div className="grid grid-cols-2 gap-4">
-      <div className="border border-slate-200 rounded-xl p-4">
-        <h1 className="text-slate-500 text-2xl font-bold text-center mb-2">
+    <div className="grid gap-4">
+      <div className="border border-slate-200 w-full rounded-xl p-4">
+        <h1 className="text-slate-500 text-2xl font-bold text-center mb-8">
           Pending
         </h1>
         <TaskForm addTask={addTask} />
