@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route, useLocation,Navigate } from "react-router-dom";
 
-
+import Form from "./Form";
 import Header from "./Header";
 import HomePage from "./HomePage";
 import TaskApp from "./TaskApp";
@@ -9,6 +9,7 @@ import TaskDetailsPage from "./TaskDetailsPage";
 import Signin from "./Signin";
 import { ProtectedRoute } from "./ProtectedRoute";
 import NotFound from "./NotFound";
+import ReactPlayground from "./ReactPlayground"
 
 function App() {
 
@@ -17,6 +18,8 @@ function App() {
  return (
    <div>
      {location.pathname !== "/signin" && location.pathname !== "/notfound" && <Header />}
+     {/* <ReactPlayground /> */}
+     <Form />
      <Routes>
        <Route path="/" element={<ProtectedRoute element={<HomePage />} />} />
        <Route path="/tasks" element={<ProtectedRoute element={ <TaskApp/> } />} />
