@@ -14,7 +14,7 @@ const Dashboard: React.FC = () => {
   const handleLogout =()=>{
     localStorage.removeItem("userData");
     localStorage.removeItem("authToken");
-    navigate("/")
+    navigate("/signin")
   }
 
   return (
