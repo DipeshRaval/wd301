@@ -3,7 +3,7 @@ import { useProjectsState } from "../../context/projects/context";
 export default function ProjectListItems() {
   let state: any = useProjectsState();
   const { projects, isLoading, isError, errorMessage } = state
-  console.log(projects);
+  // console.log(projects);
 
   // If `isLoading` is true, and there are no projects, in that case,
   // I'll show a loading text

@@ -1,7 +1,16 @@
-
+import MemberList from "./MemberList";
+import NewMember from "./NewMember";
 const Members = () => {
   return (
-    <h2>Members</h2>
+    <>
+      <div className="flex justify-between">
+        <h2 className="text-2xl font-medium tracking-tight">Members</h2>
+        <NewMember />
+      </div>
+      <div>
+        <MemberList />
+      </div>
+    </>
   )
 }
 export default Members;
