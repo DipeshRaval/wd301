@@ -42,7 +42,7 @@ const Appbar = () => {
               <div className="flex items-center">
                 <div className="flex-shrink-0">
                     <img
-                    className="h-8"
+                    className="h-8 daek:filter dark:invert"
                     src={Logo}
                     alt="Smarter Tasks"
                   />
