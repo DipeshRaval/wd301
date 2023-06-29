@@ -1,7 +1,7 @@
 import React from 'react'
 import { useMembersState } from '../../context/members/context';
-import { useCommentsState } from '../../context/comments/context';
-import { CommentData } from '../../context/comments/reducer';
+import { useCommentsState } from '../../context/comment/context';
+import { CommentData } from '../../context/comment/types';
 
 export default function CommentList() {
   const commentState = useCommentsState();

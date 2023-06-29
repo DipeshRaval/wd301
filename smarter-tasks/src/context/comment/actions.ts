@@ -1,5 +1,5 @@
 import { API_ENDPOINT } from "../../config/constants";
-import { CommentsDispatch } from "./context"
+import { CommentsDispatch, CommentListAvailableAction } from "./types"
 
 // get comments
 export const fetchComments = async (
@@ -9,7 +9,7 @@ export const fetchComments = async (
 ) => {
   const token = localStorage.getItem("authToken") ?? "";
   try {
-    dispatch({ type: "FETCH_TASKS_COMMENTS_REQUEST" });
+    dispatch({ type: CommentListAvailableAction.FETCH_TASKS_COMMENTS_REQUEST });
     const response = await fetch(
       `${API_ENDPOINT}/projects/${projectID}/tasks/${taskID}/comments`,
       {
@@ -27,13 +27,13 @@ export const fetchComments = async (
     // extract the response body as JSON data
     const data = await response.json();
     dispatch({
-      type: "FETCH_TASKS_COMMENTS_SUCCESS",
+      type: CommentListAvailableAction.FETCH_TASKS_COMMENTS_SUCCESS,
       payload: data,
     });
   } catch (error) {
     console.error("Operation failed:", error);
     dispatch({
-      type: "FETCH_TASKS_COMMENTS_FAILURE",
+      type: CommentListAvailableAction.FETCH_TASKS_COMMENTS_FAILURE,
       payload: "Unable to load comments",
     });
   }
@@ -49,7 +49,7 @@ export const addComment = async (
   const token = localStorage.getItem("authToken") ?? "";
   try {
     // The following action will toggle `isLoading` to `true`
-    dispatch({ type: "ADD_COMMENT_REQUEST" });
+    dispatch({ type: CommentListAvailableAction.ADD_COMMENT_REQUEST });
 
     // Invoke the backend server with POST request and create a task.
     const response = await fetch(
@@ -69,13 +69,13 @@ export const addComment = async (
     }
 
     // Turn `isLoading` to `false`
-    dispatch({ type: "ADD_COMMENT_SUCCESS" ,});
+    dispatch({ type: CommentListAvailableAction.ADD_COMMENT_SUCCESS ,});
     fetchComments(dispatch, projectID,taskID);
   } catch (error) {
     console.error("Operation failed:", error);
     // Update error status in the state.
     dispatch({
-      type: "ADD_COMMENT_FAILURE",
+      type: CommentListAvailableAction.ADD_COMMENT_FAILURE,
       payload: "Unable to create comment",
     });
   }

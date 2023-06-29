@@ -18,7 +18,7 @@ const Task = forwardRef<
 
   return (
     <div ref={ref} {...props} className="m-2 flex">
-      <div className="m-2 flex dark:bg-slate-800">
+      <div className="TaskItem m-2 flex dark:bg-slate-800">
         <Link
           className="TaskItem dark:bg-slate-800 w-full shadow-md border border-slate-100 bg-white"
           to={`tasks/${task.id}`}

@@ -10,8 +10,8 @@ import { useProjectsState } from "../../context/projects/context";
 import { TaskDetailsPayload } from "../../context/task/types";
 
 import Comments from "./Comments";
-import { fetchComments } from "../../context/comments/action";
-import { useCommentsDispatch, useCommentsState } from "../../context/comments/context";
+import { fetchComments } from "../../context/comment/actions";
+import { useCommentsDispatch, useCommentsState } from "../../context/comment/context";
 
 type TaskFormUpdatePayload = TaskDetailsPayload & {
   selectedPerson: string;

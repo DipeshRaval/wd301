@@ -1,9 +1,9 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { useCommentsDispatch } from '../../context/comments/context';
-import { CommentData } from '../../context/comments/reducer';
-import { addComment } from '../../context/comments/action';
+import { useCommentsDispatch } from '../../context/comment/context';
+import { CommentData } from '../../context/comment/types';
+import { addComment } from '../../context/comment/actions';
 import CommentList from './CommentList';
 
 type CommentDataPayload = Omit<CommentData, "task_id" | "owner" >;
