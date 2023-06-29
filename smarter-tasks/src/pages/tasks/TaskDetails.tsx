@@ -6,9 +6,12 @@ import { useTasksDispatch, useTasksState } from "../../context/task/context";
 import { updateTask } from "../../context/task/actions";
 import CheckIcon from "@heroicons/react/24/outline/CheckIcon";
 import { useMembersState } from "../../context/members/context";
-
 import { useProjectsState } from "../../context/projects/context";
 import { TaskDetailsPayload } from "../../context/task/types";
+
+import Comments from "./Comments";
+import { fetchComments } from "../../context/comments/action";
+import { useCommentsDispatch, useCommentsState } from "../../context/comments/context";
 
 type TaskFormUpdatePayload = TaskDetailsPayload & {
   selectedPerson: string;
@@ -36,6 +39,9 @@ const TaskDetails = () => {
   const taskDispatch = useTasksDispatch();
   const memberState = useMembersState();
 
+  const commentState = useCommentsState();
+  const commentDispatch = useCommentsDispatch();
+
   const selectedProject = projectState?.projects.filter(
     (project) => `${project.id}` === projectID
   )[0];
@@ -45,6 +51,10 @@ const TaskDetails = () => {
   const [selectedPerson, setSelectedPerson] = useState(
     selectedTask.assignedUserName ?? ""
   );
+
+    useEffect(()=>{
+      fetchComments(commentDispatch,`${projectID}`, `${taskID}`);
+    },[taskID,projectID,commentDispatch])
 
   const {
     register,
@@ -200,6 +210,7 @@ const TaskDetails = () => {
                       </button>
                     </form>
                   </div>
+                  <Comments />
                 </Dialog.Panel>
               </Transition.Child>
             </div>
