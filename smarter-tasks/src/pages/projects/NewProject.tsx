@@ -86,6 +86,7 @@ const NewProject = () => {
                       }
                       <input
                         type="text"
+                        id='name'
                         placeholder='Enter project name...'
                         autoFocus
                         {...register('name', { required: true })}
@@ -94,7 +95,7 @@ const NewProject = () => {
                         }`}
                       />
                       {errors.name && <span>This field is required</span>}
-                      <button type="submit" id='createProjectBtn' className="inline-flex justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 mr-2 text-sm font-medium text-white hover:bg-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2">
+                      <button type="submit" id='submitNewProjectBtn' className="inline-flex justify-center rounded-md border border-transparent bg-blue-600 px-4 py-2 mr-2 text-sm font-medium text-white hover:bg-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2">
                         Submit
                       </button>
                       <button type="submit" onClick={closeModal} className="inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2">
