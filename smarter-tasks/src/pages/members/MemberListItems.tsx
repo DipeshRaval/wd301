@@ -14,8 +14,6 @@ export default function ProjectListItems() {
   }
 
   if (members.length === 0) {
-    console.log(isLoading + "IsLOad");
-
     throw Error("Error!!! members are not created Yet.");
   }
 
