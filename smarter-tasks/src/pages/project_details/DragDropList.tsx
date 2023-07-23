@@ -87,6 +87,11 @@ const DragDropList = (props: { data: ProjectData }) => {
     updateTask(taskDispatch, projectID ?? "", updatedTask);
   }
 
+  if(props.data.columnOrder.length === 0)
+  {
+    throw new Error("Error !!!")
+  }
+
   return (
     <DragDropContext onDragEnd={onDragEnd}>
     <Container>

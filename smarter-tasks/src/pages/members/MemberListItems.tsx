@@ -13,6 +13,12 @@ export default function ProjectListItems() {
     return <span>Loading...</span>;
   }
 
+  if (members.length === 0) {
+    console.log(isLoading + "IsLOad");
+
+    throw Error("Error!!! members are not created Yet.");
+  }
+
   if (isError) {
     return <span>{errorMessage}</span>;
   }

@@ -26,7 +26,7 @@ const ProjectDetails = () => {
   }
 
   if (!selectedProject) {
-    return <>No such Project!</>;
+    throw new Error("There is not such a Project")
   }
   return (
     <>
