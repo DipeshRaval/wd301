@@ -7,6 +7,7 @@ export default ({ mode }) => {
     plugins: [
       react(),
       VitePWA({
+        registerType: 'autoUpdate',
         devOptions: {
           enabled: true, // For making sure that the PWA is testable from the Local dev environment
         },
