@@ -13,9 +13,9 @@ export default function ProjectListItems() {
     return <span>Loading...</span>;
   }
 
-  if (projects.length === 0) {
-    throw Error("Error!!! Projects are not created Yet.");
-  }
+  // if (projects.length === 0) {
+  //  throw Error("Error!!! Projects are not created Yet.");
+  //}
 
 // Next, if there is an error, I'll show the error message.
   if (isError) {
