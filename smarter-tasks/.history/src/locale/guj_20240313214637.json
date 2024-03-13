@@ -1,0 +1,33 @@
+{
+    "translation": {
+        "Pending": "બાકી",
+        "In progress": "પ્રગતિમાં",
+        "Done": "થઈ ગયું",
+        "Projects": "પ્રોજેક્ટ્સ",
+        "Members": "સભ્યો",
+        "newProjectButtonText": "નવો પ્રોજેક્ટ",
+        "newProjectModalHeader": "નવો પ્રોજેક્ટ બનાવો",
+        "projectNamePlaceHolder": "પ્રોજેક્ટ નામ દાખલ કરો",
+        "newMemberButtonText": "નવો સભ્ય",
+        "newMemberModalHeader": "નવો સભ્ય ઉમેરો",
+        "name": "નામ",
+        "submitButtonText": "સબમિટ",
+        "cancelButtonText": "રદ કરો",
+        "updateButtonText": "અપડેટ",
+        "addCommentBtnText": "ટિપ્પણી ઉમેરો",
+        "newTaskButtonText": "નવો કામ",
+        "newTaskModalHeader": "નવો કામ બનાવો",
+        "newTaskTitlePlaceHolder": "કામનું શીર્ષક દાખલ કરો",
+        "newTitleDescriptionPlaceHolder": "કામનું વર્ણન દાખલ કરો",
+        "taskDetailsModalHeader": "કામની વિગતો",
+        "assigneeText": "કામકર્તા",
+        "commentText": "ટિપ્પણીઓ",
+        "desctiptionText": "વર્ણન",
+        "loading": "લોડ કરાઈ રહ્યું છે....",
+        "English" : "અંગ્રેજી",
+        "Gujrati" : "ગુજરાતી",
+        "Spanish": "સ્પેનિશ",
+        "addcommentBtnText" : "કોમેન્ટ ઉમેરો"
+
+    }
+}
