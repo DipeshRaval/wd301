@@ -1,8 +1,5 @@
 import { API_ENDPOINT } from "../../config/constants";
 import { CommentsDispatch, CommentListAvailableAction } from "./types"
-import { useTranslation } from "react-i18next";
-
-const {t} = useTranslation()
 
 // get comments
 export const fetchComments = async (

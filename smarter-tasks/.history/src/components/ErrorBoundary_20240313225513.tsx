@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from "react";
+import { useTranslation } from "react-i18next";
 
 interface ErrorBoundaryState {
   hasError: boolean;

@@ -33,6 +33,7 @@
         "newMemberPasswordPlaceHolder": "Enter Password...",
         "homeBtn" : "Home",
         "notaskError" : "No such task!",
-        "noprojectError" : "No such Project!"
+        "noprojectError" : "No such Project!",
+        "loadCommentError" : "Unable to load comments"
     }
 }

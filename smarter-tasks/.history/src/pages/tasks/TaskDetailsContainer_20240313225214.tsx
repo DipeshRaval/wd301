@@ -19,7 +19,7 @@ const TaskDetailsContainer = () => {
     return <>{t('loading')}</>;
   }
   if (!selectedTask) {
-    return <>{t('notaskError')}</>;
+    return <>No such task!</>;
   }
 
   return(
