@@ -9,7 +9,9 @@ export default function CommentList() {
   const memberState = useMembersState();
   const {t, i18n:{language}} = useTranslation()
   
-  const dateFormatter = new Intl.DateTimeFormat(`${language}-${language.toUpperCase()}`, {
+  const ourLan = language.split("-")[0]
+
+  const dateFormatter = new Intl.DateTimeFormat(`${ourLan}-${ourLan.toUpperCase()}`, {
     year: "numeric",
     month: "long",
     day: "numeric",
