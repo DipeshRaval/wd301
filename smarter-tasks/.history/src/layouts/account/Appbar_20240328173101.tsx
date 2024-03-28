@@ -4,7 +4,7 @@ import { UserCircleIcon } from "@heroicons/react/24/outline";
 import Logo from "../../assets/images/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { ThemeContext } from "../../context/theme";
-// import i18n from "i18next";
+import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 
 const userNavigation = [
@@ -23,8 +23,6 @@ const Appbar = () => {
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
-
-    throw new Error("Error FOr Test Sentry.....");
   };
 
   const toggleTheme = () => {
